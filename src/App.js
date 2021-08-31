@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from "react-redux";
+// eslint-disable-next-line
 import { BrowserRouter, Router } from 'react-router-dom';
 
 import './App.css'
