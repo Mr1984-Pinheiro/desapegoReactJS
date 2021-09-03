@@ -24,25 +24,26 @@ form {
 
         .area--input {
             flex:1;
+        
 
-        input:not([type='checkbox']) {
-     width: 100%;
-     padding: 5px;
+                input:not([type='checkbox']) {
+                width: 100%;
+                padding: 5px;
 
-     font-size: 14px;
-     border-radius: 3px;
+                font-size: 14px;
+                border-radius: 3px;
+                
+                outline: transparent;
+                border: 1px solid #ddd;
+
+                transition: all ease 0.4s;
+
+                &:focus {
+                color: #333;
+                border-color: #333;
+                } 
      
-     outline: transparent;
-     border: 1px solid #ddd;
-
-     transition: all ease 0.4s;
-
-     &:focus {
-       color: #333;
-       border-color: #333;
-     }
-     
-}
+} 
 
 
 
