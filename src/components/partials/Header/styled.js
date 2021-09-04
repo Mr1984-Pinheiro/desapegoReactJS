@@ -5,6 +5,10 @@ export const HeaderArea = styled.div`
     background-color:#FFF;
     border-bottom: 1px solid #CCC;
 
+    .checkbox {
+        background:#0000FF;
+    }
+
     .container {
         max-width:1000px;
         margin:auto;
@@ -55,10 +59,14 @@ export const HeaderArea = styled.div`
             margin-left:20px;
             margin-right:20px;
 
-            a {
+            a, button {
+                border:0;
+                background:none;
                 color:#000;
                 font-size:14px;
                 text-decoration:none;
+                cursor:pointer;
+                outline:0;
 
                 &:hover{
                     color:#999;
