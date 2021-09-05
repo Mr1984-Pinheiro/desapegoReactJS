@@ -8,7 +8,6 @@ form {
     padding:10px;
     box-shadow:0px 0px 3px #999;
 
-    
     .area {
         display:flex;
         align-items:center;
@@ -25,7 +24,7 @@ form {
         .area--input {
             flex:1;
 
-            input:not([type='checkbox']) {
+            input {
                 width:100%;
                 font-size:14px;
                 padding:5px;

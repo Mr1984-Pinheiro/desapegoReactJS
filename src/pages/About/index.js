@@ -1,11 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 
-export default function index() {
+const Page = () => {
     return (
-        <div>
-            <h2>Page About</h2>
-            <Link to="/" >voltar para Home</Link>
-        </div>
-    )
+        <div>Página Sobre</div>
+    );
 }
+
+export default Page;
