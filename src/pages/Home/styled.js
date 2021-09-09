@@ -15,10 +15,69 @@ export const SearchArea = styled.div`
         display:flex;
 
         form{
-            
+            flex:1;
+            display:flex;
+
+            input, select {
+                height:40px;
+                border:0;
+                border-radius:5px;
+                outline:0;
+                font-size;15px;
+                color:#000;
+                margin-right:20px; 
+            }
+
+            input {
+                flex:1;
+                padding:0 10px;
+            }
+
+            select {
+                width:100px; 
+            }
+
+            button {
+                background-color:#49AEEF;
+                height:40px;
+                border:0;
+                border-radius:5px;
+                padding:0 20px;
+                font-size;15px;
+                color:#FFF;                
+                cursor:pointer;
+            }
+
+
         }
     }
 
+
+.categoryList {
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:20px;
+
+    .categoryItem {
+        width:25%;
+        display:flex;
+        align-items:center;
+        color:#000;
+        text-decoration:none;
+        height:50px;
+        margin-bottom:10px;
+
+        &:hover {
+            color:#999;
+        }
+
+        img {
+            width:45px;
+            height:45px;
+            margin-right:10px;
+        }
+    }
+}
 
 `;
 
