@@ -5,12 +5,15 @@ import useApi from '../../helpers/OlxAPI';
 
 import { PageContainer } from '../../components/MainComponents';
 import { Link } from 'react-router-dom';
+import AdItem from '../../components/partials/AdItem';
+
 
 const Page = () => {
     const api = useApi();
 
     const [stateList, setStateList] = useState([]);
     const [categories, setCategories] = useState([]);
+    const [adList, setAdList] = useState([]);
 
     useEffect(() => {
         const getStates = async () => {
@@ -26,6 +29,17 @@ const Page = () => {
             setCategories(cats);
         }
         getCategories();
+    }, []);
+
+    useEffect(() => {
+        const getRecentAds = async () => {
+            const json = await api.getAds({
+                sort: 'desc',
+                limit: 8
+            });
+            setAdList(json.ads);
+        }
+        getRecentAds();
     }, []);
 
 
@@ -62,8 +76,17 @@ const Page = () => {
 
             <PageContainer>
                 <PageArea>
-                    Home
+                    <h2>Anúncios Recentes</h2>
+                    <div className="list">
+                        {adList.map((i, k) =>
+                            <AdItem key={k} data={i} />
+                        )}
+                    </div>
+                    <Link to="/ads" className="seeAllLink">Ver Todos</Link>
 
+                    <hr />
+
+                    jkksdhfjksd asdkjfhdsj fsdkjd sfjdndnjviw viiddn djdnjdjd ddndid d diwhdincd sois iosdjue is iosi idxcn didsiiw ad iw dssf dsfsofkdid fosdfsd9sd fsofs  9df di iudj iu
                 </PageArea>
             </PageContainer>
         </>
