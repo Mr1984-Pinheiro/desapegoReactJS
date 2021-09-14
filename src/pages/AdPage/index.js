@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PageArea, Fake } from './styled';
 import { useParams } from 'react-router';
+import { Slide } from 'react-slideshow-image'
 import useApi from '../../helpers/OlxAPI';
 
 
@@ -41,6 +42,15 @@ const Page = () => {
                     <div className="box">
                         <div className="adImage">
                             {loading && <Fake height={300} />}
+                            {adInfo.images &&
+                                <Slide>
+                                    {adInfo.images.map((img, k) =>
+                                        <div key={k} className="each-slide">
+                                            <img src={img} alt="" />
+                                        </div>
+                                    )}
+                                </Slide>
+                            }
                         </div>
                         <div className="adInfo">
                             <div className="adName">
@@ -67,6 +77,13 @@ const Page = () => {
                 <div className="rightSide">
                     <div className="box box--padding">
                         {loading && <Fake height={20} />}
+                        {adInfo.priceNegotiable &&
+                            "Preço Negociável"
+                        }
+                        {!adInfo.priceNegotiable && adInfo.price &&
+                            <div className="price">Preço: <span>R$ {adInfo.price}</span></div>
+                        }
+
                     </div>
                     <div className="box box--padding">
                         {loading && <Fake height={50} />}
