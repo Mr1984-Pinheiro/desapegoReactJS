@@ -85,8 +85,8 @@ const Page = () => {
                     <Link to="/ads" className="seeAllLink">Ver Todos</Link>
 
                     <hr />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris magna, convallis at laoreet nec, efficitur non felis. Proin sit amet ante ligula. Proin at orci vitae nunc feugiat aliquet nec sit amet ligula. Curabitur scelerisque pretium turpis, a suscipit sapien ornare quis. Proin sit amet posuere justo, quis rhoncus quam. In vel velit eget mi convallis dignissim in eget odio. Sed pretium dignissim egestas. Morbi quis tincidunt ex. Sed vel faucibus nisi, nec faucibus erat. Fusce interdum magna ut libero iaculis, eget porttitor quam maximus. Fusce at dui vitae sapien convallis scelerisque.
 
-                    jkksdhfjksd asdkjfhdsj fsdkjd sfjdndnjviw viiddn djdnjdjd ddndid d diwhdincd sois iosdjue is iosi idxcn didsiiw ad iw dssf dsfsofkdid fosdfsd9sd fsofs  9df di iudj iu
                 </PageArea>
             </PageContainer>
         </>

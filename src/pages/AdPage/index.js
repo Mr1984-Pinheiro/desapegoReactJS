@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { PageArea, Fake } from './styled';
+import { PageArea, Fake, OthersArea, BreadCrump } from './styled';
 import { useParams } from 'react-router';
 import { Slide } from 'react-slideshow-image'
 import useApi from '../../helpers/OlxAPI';
 
 
 import { PageContainer } from '../../components/MainComponents';
+import AdItem from '../../components/partials/AdItem';
+import { Link } from 'react-router-dom';
 
 
 const Page = () => {
@@ -37,6 +39,19 @@ const Page = () => {
 
     return (
         <PageContainer>
+            {adInfo.category &&
+                <BreadCrump>
+                    Você está aqui:
+                    <Link to="/">Home</Link>
+                    /
+                    <Link to={`/ads?state=${adInfo.stateName}`}>{adInfo.stateName}</Link>
+                    /
+                    <Link to={`/ads?state=${adInfo.stateName}&cat=${adInfo.category.slug}`}>{adInfo.category.name}</Link>
+                    / {adInfo.title}
+
+
+                </BreadCrump>
+            }
             <PageArea>
                 <div className="leftSide">
                     <div className="box">
@@ -85,11 +100,38 @@ const Page = () => {
                         }
 
                     </div>
-                    <div className="box box--padding">
-                        {loading && <Fake height={50} />}
-                    </div>
+                    {loading && <Fake height={50} />}
+                    {adInfo.userInfo &&
+                        <>
+                            <a href={`mailto:${adInfo.userInfo.email}`} target="_blank" className="contactSellerLink">Fale com o vendedor</a>
+                            <div className="createdBy box box--padding">
+                                Criado por:
+                                <strong>{adInfo.userInfo.name}</strong>
+                                <small>E-mail: {adInfo.userInfo.email}</small>
+                                <small>Estado: {adInfo.stateName}</small>
+                            </div>
+                        </>
+                    }
+
                 </div>
+
+
             </PageArea>
+
+            <OthersArea>
+                {adInfo.others &&
+                    <>
+                        <h2>Outras ofertas do vendedor</h2>
+                        <div className="list">
+                            {adInfo.others.map((i, k) =>
+                                <AdItem key={k} data={i} />
+                            )}
+                        </div>
+                    </>
+                }
+
+            </OthersArea>
+
         </PageContainer>
     );
 }

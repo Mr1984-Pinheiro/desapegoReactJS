@@ -78,6 +78,58 @@ margin-top:20px;
         font-size:27px;
         font-weight:bold;
     }
+
+    .contactSellerLink {
+        background-color:#0000FF;
+        color:#FFF;
+        height:30px;
+        border-radius:5px;
+        box-shadow:0px 0px 4px #999;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-decoration:none;
+        margin-bottom:20px;
+    }
+
+    // .createdBy strong {
+    //     display:block;
+    // }
+
+    .createdBy small {
+        display:block;
+        color:#999;
+        margin-top:10px;
+    }
+}
+
+`;
+
+export const OthersArea = styled.div`
+h2 {
+    font-size:20px;
+}
+
+.list {
+    display:flex;
+
+    .aditem {
+        width:25%;
+    }
+
+}
+
+`;
+
+export const BreadCrump = styled.div`
+font-size:13px;
+margin-top:20px;
+
+a {
+    display:inline-block;
+    margin: 0px 5px;
+    text-decoration:underline;
+    color:#000;
 }
 
 `;
