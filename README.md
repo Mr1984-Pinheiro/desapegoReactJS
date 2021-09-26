@@ -4,8 +4,8 @@
       
 </h1>
 
-##
-:pencil: Descrição
+## :pencil: Descrição
+
 
 
 
@@ -16,7 +16,7 @@ Este site foi desenvolvido com algumas das funcionalidades semelhantes ao site d
 
 <br>
 
-## Tecnologias
+## :technologist: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -24,12 +24,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 <br>
 
-## Próximo passo...
+## :foot: Próximo passo...
 
 Futuramente pode ser feito implementações quanto a página minha conta, plano profissional, contato via chat e notificações.
 
 
-## 💻 
+
 <br>
 
 
