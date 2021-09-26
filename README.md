@@ -1,8 +1,18 @@
 
 <h1 align="center" display="flex">
-    <img alt="Site Desapego" src="https://user-images.githubusercontent.com/73333067/134793460-a05c1168-a1ec-4a1f-992d-01ee7a21b786.mp4" width="px">
-        
+    <video alt="Site Desapego" src="https://user-images.githubusercontent.com/73333067/134793460-a05c1168-a1ec-4a1f-992d-01ee7a21b786.mp4" width="px"/>
+      
 </h1>
+
+##
+:pencil: Descrição
+
+
+
+Este site foi desenvolvido com algumas das funcionalidades semelhantes ao site da **[Olx](https://www.olx.com.br/)**, servindo de inspiração para treinar componetização, rotas, api, estilização, SPA, responsividade, etc.
+
+
+
 
 <br>
 
@@ -10,14 +20,20 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Html5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [Css3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [ReactJS](https://reactjs.org/), bibliotecas e dependências: js-cookie, qs, react, react-dom, react-redux, react-router-dom, react-scripts, react-slideshow-image, react-text-mask, redux, styled-components e text-mask-addons.
 
-## 💻 Projeto
+<br>
 
-SiteDesign é um template de e-comerce que oferece serviços de design. Brincando e praticando a responsividade, criatividade e os conhecimentos adquiridos nessas tecnologias.
+## Próximo passo...
 
-Este é um projeto desenvolvido durante o curso **[B7Web Full Stack](https://b7web.com.br/fullstack/?ref=I24108426I&gclid=EAIaIQobChMI-aWw5dPa8gIVBwyRCh1mQQF1EAAYASAAEgK_KfD_BwE)**, no módulo Html5 e Css3.
+Futuramente pode ser feito implementações quanto a página minha conta, plano profissional, contato via chat e notificações.
+
+
+## 💻 
+<br>
+
+
+Este é um projeto desenvolvido durante o curso **[B7Web Full Stack](https://b7web.com.br/fullstack/?ref=I24108426I&gclid=EAIaIQobChMI-aWw5dPa8gIVBwyRCh1mQQF1EAAYASAAEgK_KfD_BwE)**, no módulo ReactJs.
 
 ---
 
