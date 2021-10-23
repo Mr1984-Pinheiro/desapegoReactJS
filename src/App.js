@@ -1,37 +1,50 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
-import './App.css';
+import { Container, Menu, PageBody } from './AppStyled';
 
-import { Template } from './components/MainComponents';
-import Header from './components/partials/Header';
-import Footer from './components/partials/Footer';
+import HomeScreen from './pages/HomeScreen';
+import Tela2Screen from './pages/Tela2Screen';
 
-import Routes from './Routes';
+import PrivateRoute from './components/PrivateRoute';
+import MenuItem from './components/MenuItem';
+import Cart from './components/Cart';
 
-const Page = (props) => {
-  return (
-    <BrowserRouter>
-      <Template>
-        <Header />
-        <Routes />
-        <Footer />
-      </Template>
-    </BrowserRouter>
-  );
+export default () => {
+    const name = useSelector(state => state.user.name);
+
+    return (
+        <BrowserRouter>
+            <Container>
+                <Menu>
+                    <MenuItem icon="/assets/store.png" link="/" />
+                    <MenuItem icon="/assets/order.png" link="/orders" />
+                    <MenuItem icon="/assets/profile.png" link="/profile" />
+                </Menu>
+                <PageBody>
+                    <Switch>
+                        <Route exact path="/">
+                            <HomeScreen />
+                        </Route>
+                        <PrivateRoute path="/orders">
+                            <div>Tela de Pedidos</div>
+                        </PrivateRoute>
+                        <PrivateRoute path="/profile">
+                            <div>Tela de Perfil</div>
+                        </PrivateRoute>
+                        <Route path="/tela2/:nome">
+                            <Tela2Screen />
+                        </Route>
+                    </Switch>
+                </PageBody>
+                <Cart />
+
+
+            </Container>
+            <h1>Oi, {name}</h1>
+
+
+        </BrowserRouter>
+    );
 }
-
-const mapStateToProps = (state) => {
-  return {
-    user:state.user
-  };
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
